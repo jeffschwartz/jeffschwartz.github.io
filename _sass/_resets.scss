@@ -1,0 +1,12 @@
+// resets
+
+// block box sizing = border box
+* {
+    box-sizing: border-box;
+}
+
+// remove any default margin and padding from headers
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}

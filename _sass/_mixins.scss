@@ -1,0 +1,25 @@
+// mixins
+@mixin banner($image-url, $bgcolor: transparent) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $bgcolor;
+    background-image: url($image-url);
+    background-origin: border-box;
+    background-size: cover;
+    background-position: center center;
+    background-clip: border-box;
+    height: 100%;
+}
+
+@mixin banner__mojo($fontsize, $color, $bgcolor: transparent) {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: $bgcolor;
+    color: $color;
+    font-size: $fontsize;
+    font-weight: 900;
+    padding: 1rem;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+}

@@ -1,0 +1,140 @@
+---
+---
+@import "mixins";
+@import "resets";
+html,
+body {
+    height: 100%;
+    height: 100vh;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/*
+    Home page
+*/
+
+.home-banner {
+    @include banner("../media/black-and-white-close-up-cobweb.jpg", #000);
+}
+
+.home-banner__mojo {
+    @include banner__mojo(3.5rem, white);
+}
+
+.home-page, .about-page, .contact-page, .blog-page {
+    padding: 5rem 2rem;
+}
+
+.home-bio {
+    width: 100%;
+}
+
+.home-bio__content {
+    margin: 1rem 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.2rem; // color: rgba(0, 0, 0, .90);
+    color: rgba(#000, .9);
+    letter-spacing: 1px;
+    margin: 2rem auto;
+}
+
+.navigation-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navigation {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.navigation__item {
+    margin: 1rem 0;
+    text-transform: uppercase;
+    border: 2px solid #000;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .27);
+    text-align: center;
+    font-weight: 700;
+    display: block;
+}
+
+.navigation__link {
+    display: block;
+    text-decoration: none;
+    padding: .7rem 0;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navigation__link:hover {
+    background-color: black;
+    color: white;
+    transition: all .4s ease-in-out;
+}
+
+.footer {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #000;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+    color: rgba(#fff, .76);
+}
+
+.footer__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* About page */
+
+.about-banner {
+    @include banner("../media/cyclone-roller-coaster-coney-island.jpg", #979494);
+    filter: grayscale(92%);
+}
+
+.about-banner__mojo {
+    @include banner__mojo(3.5rem, white);
+}
+
+/* About page */
+
+.blog-banner {
+    @include banner("../media/alphabet-arts-and-crafts-blog-459688.jpg", #979494);
+    filter: grayscale(90%);
+}
+
+.blog-banner__mojo {
+    @include banner__mojo(3.5rem, white);
+}
+
+/* Contact page */
+
+.contact-banner {
+    @include banner("../media/tatoo-handshake.jpg", #979494);
+    filter: grayscale(90%);
+}
+
+.contact-banner__mojo {
+    @include banner__mojo(3.5rem, white);
+}
+
+@media(min-width: 640px) {
+    .home-banner__mojo, .about-banner__mojo, .blog-banner__mojo, .contact-banner__mojo {
+        font-size: 5rem;
+    }
+    .home-bio__content, .about-bio__content, .blog-bio__content, .contact-bio__content {
+        width: 54%;
+    }
+    .navigation-container {
+        width: 40%;
+    }
+}

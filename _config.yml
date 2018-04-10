@@ -41,3 +41,7 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# For SASS @import to work
+sass:
+    sass_dir: _sass
